@@ -15,7 +15,7 @@ function App()
   const [includeSymbols, setIncludeSymbols] = useState(false)
   const handleGeneratePassword = () => {
     if (!includeUpperCase && !includeLowerCase && !includeNumbers && !includeSymbols) {
-      notify("To generate password you must select atleast one checkbox", true)
+      notify("To generate password you must select atleast one checkbox!", true)
     }
     else {
       let characterList = ""
@@ -32,7 +32,7 @@ function App()
         characterList = characterList + specialCharacters
       }
       setPassword(createPassword(characterList))
-      notify("Password is generated successfully", false)
+      notify("Password is generated successfully!", false)
     }
 
 
